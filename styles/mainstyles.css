@@ -1,8 +1,375 @@
-*{
-  box-sizing: border-box;
-  margin:0;
-  padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-  font-family: 'Lato', sans-serif;
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 62.5%;
+}
+
+a:active, a:visited, a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#banner {
+    background: linear-gradient(rgba(45, 9, 60, 0)80%, rgba(45, 9, 60, 1)), url("../imgs/bannerBackground.png") 50% 0 no-repeat;
+    ;
+    height: 100vh;
+    background-size: cover;
+}
+
+.container {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 1.6em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    text-align: center;
+    margin-left: 1em;
+}
+
+.welcome {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.welcome h1 {
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1;
+}
+
+h1>b {
+    font-family: 'Lato';
+    font-size: 4em;
+    font-weight: bold;
+    font-style: normal;
+    color: #fff;
+}
+
+.welcome button {
+    background: none;
+    outline: 0;
+    border: 0;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 1.2em 4em;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    margin: 2em 0;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .3s;
+}
+
+.welcome button:hover {
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.welcome p {
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    word-spacing: 2px;
+}
+
+
+/*styles for main section*/
+
+.advantages {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10em 0;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    width: calc(100%/3 - 2em);
+}
+
+.benefit img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.benefit h1 {
+    text-transform: uppercase;
+    font-size: 2.4em;
+}
+
+.benefit hr {
+    outline: 0;
+    border: 0;
+    background: rgba(255, 0, 0, 0.5);
+    width: 80px;
+    height: 1px;
+    transition: all .3s ease-in-out;
+}
+
+.benefit:hover hr {
+    width: 100px;
+}
+
+.benefit p {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.fudi-app {
+    background: #F7F7F7;
+    padding-top: 10em;
+}
+
+.app-container {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-container>img.rotate {
+    animation: rotate 1s forwards 1 cubic-bezier(.92, .22, .7, 2.16);
+    transform-origin: 0% 100%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-15deg) scale(0.85);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
+
+.app-content {
+    margin: 100px 0 0 10%;
+    font-size: 1.6em
+}
+
+.app-content h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em
+}
+
+.app-content hr {
+    border: 0;
+    outline: 0;
+    width: 100px;
+    height: 1px;
+    background: rgba(255, 0, 0, 0.5);
+    margin-top: 5px;
+}
+
+.app-content p {
+    margin: 1.4em 0;
+    line-height: 1.4;
+}
+
+.slider {
+    background: rgba(74, 54, 73, 1);
+}
+
+.slicker {
+    background: linear-gradient(rgba(74, 54, 73, 1), rgba(74, 54, 73, 0.9)), url("../imgs/sliderBackground.png") no-repeat bottom;
+    /*background-size: 100%;*/
+    width: 65%;
+    margin: 0 auto;
+    height: 400px;
+    outline:0;
+    overflow:hidden;
+}
+.slider-content{
+  outline:0;
+}
+
+.person {
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0 0 0;
+    font-size: 2.4em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.person>img {
+    border-radius: 50%;
+    border: 3px solid gray;
+    margin-bottom: 40px;
+}
+
+.person cite {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+#cuisines h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 4em 0 0.4em 0;
+}
+
+#cuisines h1~hr {
+    background: rgba(255, 0, 0, 0.6);
+    outline: 0;
+    border: 0;
+    width: 90px;
+    height: 1px;
+    margin: 0 auto;
+}
+
+.dishes {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    -o-column-count: 5;
+    column-count: 5;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    -o-column-gap: 0;
+    column-gap: 0;
+    margin: 0;
+    line-height: 0;
+    margin-top:30px;
+}
+
+.dish {
+    position: relative;
+}
+
+.dish>img {
+    width: 100%;
+    height: auto;
+    transition: all .1s;
+}
+
+.about-dish {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:rgba(255,255,255,0.9);
+    font-size:2em;
+    transition:all 1s;
+    cursor:pointer;
+}
+.about-dish h2{
+  font-size:1em;
+  font-style: italic;
+  font-family: 'Times New Roman';
+  transition:all .3s;
+}
+.about-dish p{
+  font-size:2.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top:30px;
+}
+
+.about-dish:hover{
+  color:#fff;
+}
+.about-dish:hover h2{
+  margin-bottom:10px;
+}
+
+.stats{
+  width:65%;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-between;
+  text-align: center;
+  padding:8em 0;
+}
+.stat h3{
+  font-size:4em;
+  font-weight: bold;
+}
+.stat p{
+  font-size: 1.6em;
+}
+
+footer{
+  background:#F7F7F7;
+  padding:2em 0;
+  font-size:1.6em;
+  text-transform: uppercase;
+}
+footer div{
+  width:65%;
+  margin:0 auto;
+  display:flex;
+  justify-content: flex-end;
+}
+
+footer div p{
+  margin-right: 15px;
+  opacity:0.7;
+}
+footer div a{
+  font-weight: bold;
+  letter-spacing: 1px;
 }
