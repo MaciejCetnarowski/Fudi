@@ -20,7 +20,6 @@ a:active, a:visited, a:link {
 
 #banner {
     background: linear-gradient(rgba(45, 9, 60, 0)80%, rgba(45, 9, 60, 1)), url("../imgs/bannerBackground.png") 50% 0 no-repeat;
-    ;
     height: 100vh;
     background-size: cover;
 }
@@ -30,7 +29,6 @@ a:active, a:visited, a:link {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
 }
 
 header {
@@ -43,7 +41,7 @@ header {
 nav ul {
     list-style-type: none;
     display: flex;
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: #fff;
     text-transform: uppercase;
 }
@@ -84,6 +82,10 @@ h1>b {
     font-weight: bold;
     font-style: normal;
     color: #fff;
+}
+
+.welcome p br {
+    display: none;
 }
 
 .welcome button {
@@ -177,6 +179,12 @@ h1>b {
     justify-content: space-between;
 }
 
+.app-container>img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+}
+
 .app-container>img.rotate {
     animation: rotate 1s forwards 1 cubic-bezier(.92, .22, .7, 2.16);
     transform-origin: 0% 100%;
@@ -188,13 +196,14 @@ h1>b {
         opacity: 0;
     }
     100% {
-        transform: rotate(0)
+        transform: rotate(0);
+        opacity: 1;
     }
 }
 
 .app-content {
     margin: 100px 0 0 10%;
-    font-size: 1.6em
+    font-size: 1.8em
 }
 
 .app-content h1 {
@@ -227,11 +236,12 @@ h1>b {
     width: 65%;
     margin: 0 auto;
     height: 400px;
-    outline:0;
-    overflow:hidden;
+    outline: 0;
+    overflow: hidden;
 }
-.slider-content{
-  outline:0;
+
+.slider-content {
+    outline: 0;
 }
 
 .person {
@@ -287,7 +297,7 @@ h1>b {
     column-gap: 0;
     margin: 0;
     line-height: 0;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 .dish {
@@ -311,65 +321,86 @@ h1>b {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color:rgba(255,255,255,0.9);
-    font-size:2em;
-    transition:all 1s;
-    cursor:pointer;
-}
-.about-dish h2{
-  font-size:1em;
-  font-style: italic;
-  font-family: 'Times New Roman';
-  transition:all .3s;
-}
-.about-dish p{
-  font-size:2.4em;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top:30px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.8em;
+    transition: all 1s;
+    cursor: pointer;
 }
 
-.about-dish:hover{
-  color:#fff;
-}
-.about-dish:hover h2{
-  margin-bottom:10px;
-}
-
-.stats{
-  width:65%;
-  margin:0 auto;
-  display:flex;
-  justify-content: space-between;
-  text-align: center;
-  padding:8em 0;
-}
-.stat h3{
-  font-size:4em;
-  font-weight: bold;
-}
-.stat p{
-  font-size: 1.6em;
+.about-dish h2 {
+    font-size: 1em;
+    font-style: italic;
+    font-family: 'Times New Roman';
+    transition: all .3s;
 }
 
-footer{
-  background:#F7F7F7;
-  padding:2em 0;
-  font-size:1.6em;
-  text-transform: uppercase;
-}
-footer div{
-  width:65%;
-  margin:0 auto;
-  display:flex;
-  justify-content: flex-end;
+.about-dish p {
+    font-size: 2.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
 }
 
-footer div p{
-  margin-right: 15px;
-  opacity:0.7;
+.about-dish:hover {
+    color: #fff;
 }
-footer div a{
-  font-weight: bold;
-  letter-spacing: 1px;
+
+.about-dish:hover h2 {
+    margin-bottom: 10px;
+}
+
+.stats {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 8em 0;
+}
+
+.stat h3 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.stat p {
+    font-size: 1.6em;
+}
+
+footer {
+    background: #F7F7F7;
+    padding: 2em 0;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+footer div {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer div p {
+    margin-right: 15px;
+    opacity: 0.7;
+}
+
+footer div a {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer div a:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: #4F3649;
+    transition: width .3s;
+    transform: translate(0, 5px)
+}
+
+footer div a:hover::after {
+    width: 100%;
 }
